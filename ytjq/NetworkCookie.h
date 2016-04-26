@@ -1,0 +1,24 @@
+#ifndef NETWORKCOOKIE_H
+#define NETWORKCOOKIE_H
+
+#include <QtNetwork/QNetworkCookie>
+#include <QtNetwork/QNetworkCookieJar>
+
+/************************************************************************/
+/* ±£¥ÊCookie–≈œ¢                                                                     */
+/************************************************************************/
+class NetworkCookie : public QNetworkCookieJar
+{
+	Q_OBJECT
+
+public:
+	NetworkCookie(QObject *parent);
+	~NetworkCookie();
+
+	QList<QNetworkCookie> getCookies();
+	void setCookies(const QList<QNetworkCookie>& cookieList);
+private:
+
+};
+
+#endif // NETWORKCOOKIE_H
